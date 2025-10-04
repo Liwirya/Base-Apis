@@ -1,0 +1,54 @@
+{
+  "name": "HaewonAPIs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier:check": "prettier . --check",
+    "prettier:write": "prettier . --write",
+    "preinstall": "echo '✅ Preinstall: Memastikan konsistensi dependensi...'",
+    "postinstall": "echo '✅ Instalasi selesai. Pastikan tidak ada modul mencurigakan.'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.14.10", 
+    "axios": "^1.12.2",
+    "axios-cookiejar-support": "^6.0.4",
+    "cfonts": "^3.2.0",
+    "chalk": "^4.1.1",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jimp": "^0.16.13",
+    "jsqr": "^1.4.0",
+    "memory-cache": "^0.2.0", 
+    "moment-timezone": "^0.6.0",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "pino": "^10.0.0",
+    "qrcode": "^1.5.4",
+    "qrcode-reader": "^1.0.4",
+    "qs": "^6.12.1",
+    "spinnies": "^0.5.1",
+    "swagger-themes": "^1.4.3",
+    "swagger-ui-express": "^5.0.0",
+    "tough-cookie": "^6.0.0" 
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2",
+    "prettier": "^3.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "config": {
+    "ignore-scripts": true
+  },
+  "volta": {
+    "node": "20.14.0"
+  }
+}

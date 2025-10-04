@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="HaewonAPIs free and simple." />
+  <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate" />
+  <meta name="author" content="Liwirya" />
+  <title>HaewonAPIs</title>
+
+  <meta property="og:site_name" content="HaewonAPIs" />
+  <meta property="og:title" content="HaewonAPIs" />
+  <meta property="og:description" content="Enjoy seamless integration with our Simple Rest API, completely free of charge..." />
+  <meta property="og:image" content="https://files.catbox.moe/int1gy.jpg" />
+  <meta property="og:url" content="https://www.hitam.live/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@natzxe" />
+  <meta name="twitter:title" content="HaewonAPIs by Liwirya" />
+  <meta name="twitter:description" content="Enjoy seamless integration..." />
+  <meta name="twitter:image" content="https://files.catbox.moe/int1gy.jpg" />
+
+  <link rel="shortcut icon" href="https://files.catbox.moe/int1gy.jpg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #00ff9d;
+      --secondary: #ff00e6;
+      --text-light: #ffffff;
+      --text-muted: #a0a0a0;
+      --bg: #0a0a0a;
+      --card-bg: rgba(20, 20, 20, 0.75);
+      --border-radius: 18px;
+      --transition-fast: all 0.3s ease;
+      --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://files.catbox.moe/int1gy.jpg') no-repeat center center;
+      background-size: cover;
+      filter: brightness(0.35) blur(1px);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent 0%, rgba(10, 10, 10, 0.9) 100%);
+      z-index: -1;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      max-width: 900px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+      padding: 2.8rem 2.2rem;
+      margin: 0 auto 2.5rem;
+      animation: cardPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    @keyframes cardPop {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .brand {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(90deg, #fff, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1.2px;
+      text-shadow: 0 2px 10px rgba(0, 255, 157, 0.2);
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 2.8rem;
+      animation: fadeInUp 0.8s ease 0.2s forwards;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    .cta-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      min-width: 190px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      border: 2px solid transparent;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-primary {
+      background: transparent;
+      color: var(--primary);
+      border-color: var(--primary);
+      animation: fadeInUp 0.8s ease 0.4s forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .btn-secondary {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+      animation: fadeInUp 0.8s ease 0.5s forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .btn:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow:
+        0 8px 25px rgba(0, 255, 157, 0.4),
+        0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.6s;
+      z-index: -1;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .icon {
+      margin-right: 0.6rem;
+      font-size: 1.3rem;
+      transition: transform 0.4s ease, color 0.3s ease;
+    }
+
+    .btn:hover .icon {
+      transform: rotate(15deg) scale(1.1);
+    }
+
+    .footer {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      animation: fadeIn 1s ease 0.9s forwards;
+      opacity: 0;
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 2px;
+      transition: var(--transition-fast);
+    }
+
+    .footer a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--primary);
+      transition: width 0.4s ease;
+    }
+
+    .footer a:hover::after {
+      width: 100%;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .brand { font-size: 2.8rem; }
+      .subtitle { font-size: 1.1rem; padding: 0 1rem; }
+      .btn { padding: 0.9rem 1.8rem; font-size: 1rem; min-width: 160px; }
+      .content-card { padding: 2rem 1.5rem; margin-bottom: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .brand { font-size: 2.3rem; }
+      .subtitle { font-size: 1rem; }
+      .cta-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .btn { width: 100%; min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content-card">
+      <h1 class="brand">HaewonAPIs</h1>
+      <p class="subtitle">
+        Enjoy easy integration with HaewonAPIs – a simple, fast, and completely free RESTful solution. 
+        With no hidden costs, designed to support your development needs with easy-to-use, efficient, and reliable APIs.
+      </p>
+
+      <div class="cta-container">
+        <a href="/playground" class="btn btn-primary">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          Read Docs
+        </a>
+        <a href="https://whatsapp.com/channel/0029VadHRVCEQIagiLHVJV0d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <span class="icon"><i class="fab fa-whatsapp"></i></span>
+          Join WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Created by <a href="https://github.com/Liwirya" target="_blank">Liwirya</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
