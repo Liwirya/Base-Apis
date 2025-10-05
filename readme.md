@@ -117,9 +117,4 @@ MIT © 2025 Liwirya
 
 ## 💬 Contact
 
-- 📧 Email: wiraliwirya@gmail.com
-- 🌐 Website: [https://www.hitam.live](https://www.hitam.live)
-- 📱 WhatsApp: [wa.me/6283879152564](https://wa.me/6283879152564)
-- 🐦 Twitter: [@liwiryawira](https://twitter.com/liwiryawira)
-- 📷 Instagram: [@liwiryawira](https://instagram.com/mynameisliwirya)
 - 🧑‍💻 GitHub: [github.com/Liwirya](https://github.com/Liwirya)
