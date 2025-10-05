@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="HaewonAPIs free and simple." />
+  <meta name="description" content="HaewonAPIs - Simple, Fast, and Free REST API for Developers." />
   <meta name="robots" content="archive, follow, imageindex, index, odp, snippet, translate" />
   <meta name="author" content="Liwirya" />
   <title>HaewonAPIs</title>
@@ -15,8 +15,9 @@
   <meta property="og:image" content="https://files.catbox.moe/int1gy.jpg" />
   <meta property="og:url" content="https://www.hitam.live/" />
   <meta property="og:type" content="website" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@natzxe" />
+  <meta name="twitter:site" content="@liwiryawira" />
   <meta name="twitter:title" content="HaewonAPIs by Liwirya" />
   <meta name="twitter:description" content="Enjoy seamless integration..." />
   <meta name="twitter:image" content="https://files.catbox.moe/int1gy.jpg" />
@@ -24,19 +25,38 @@
   <link rel="shortcut icon" href="https://files.catbox.moe/int1gy.jpg" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
-      --primary: #00ff9d;
-      --secondary: #ff00e6;
+      /* Palet Warna Modern */
+      --primary: #00ff9d; /* Neon Hijau Cerah */
+      --primary-dark: #00cc7a; /* Untuk hover */
+      --secondary: #ff00e6; /* Neon Pink Cerah */
       --text-light: #ffffff;
       --text-muted: #a0a0a0;
+      --text-body: #e0e0e0;
       --bg: #0a0a0a;
       --card-bg: rgba(20, 20, 20, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      --card-inner-shadow: inset 0 0 0 1px var(--card-border);
       --border-radius: 18px;
       --transition-fast: all 0.3s ease;
-      --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      --transition: all 0.5s cubic-bezier(0.165, 0.885, 0.44, 1.275);
+      --spacing-sm: 0.75rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2.5rem;
+      --spacing-xl: 3rem;
+      --font-size-sm: 0.9rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.25rem;
+      --font-size-xl: 1.5rem;
+      --font-size-xxl: 2.5rem;
+      --font-size-xxxl: 3.5rem;
+      --line-height-base: 1.6;
+      --line-height-tight: 1.4;
     }
 
     * {
@@ -52,14 +72,15 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg);
-      color: var(--text-light);
+      color: var(--text-body);
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      line-height: 1.6;
+      line-height: var(--line-height-base);
+      padding: var(--spacing-md);
     }
 
     body::before {
@@ -99,8 +120,9 @@
 
     .container {
       text-align: center;
-      padding: 2.5rem 1.5rem;
+      padding: var(--spacing-lg);
       max-width: 900px;
+      width: 100%;
       z-index: 10;
       position: relative;
     }
@@ -110,12 +132,10 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-radius: var(--border-radius);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.6),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-      padding: 2.8rem 2.2rem;
-      margin: 0 auto 2.5rem;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--card-shadow), var(--card-inner-shadow);
+      padding: var(--spacing-xl) var(--spacing-lg);
+      margin: 0 auto var(--spacing-lg);
       animation: cardPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
       opacity: 0;
       transform: scale(0.95);
@@ -129,10 +149,10 @@
     }
 
     .brand {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      background: linear-gradient(90deg, #fff, var(--primary), var(--secondary));
+      font-size: var(--font-size-xxxl);
+      font-weight: 700;
+      margin-bottom: var(--spacing-md);
+      background: linear-gradient(90deg, var(--text-light), var(--primary), var(--secondary));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -141,25 +161,27 @@
       animation: fadeInUp 0.8s ease forwards;
       opacity: 0;
       transform: translateY(20px);
+      line-height: var(--line-height-tight);
     }
 
     .subtitle {
-      font-size: 1.25rem;
+      font-size: var(--font-size-lg);
       font-weight: 300;
       color: var(--text-muted);
       max-width: 650px;
-      margin: 0 auto 2.8rem;
+      margin: 0 auto var(--spacing-xl);
       animation: fadeInUp 0.8s ease 0.2s forwards;
       opacity: 0;
       transform: translateY(15px);
+      line-height: var(--line-height-base);
     }
 
     .cta-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.4rem;
-      margin-bottom: 2rem;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
     }
 
     .btn {
@@ -169,7 +191,7 @@
       padding: 1rem 2.2rem;
       border-radius: 60px;
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: var(--font-size-base);
       text-decoration: none;
       transition: var(--transition);
       position: relative;
@@ -203,8 +225,13 @@
     .btn:hover {
       transform: translateY(-6px) scale(1.03);
       box-shadow:
-        0 8px 25px rgba(0, 255, 157, 0.4),
-        0 4px 10px rgba(0, 0, 0, 0.4);
+          0 8px 25px rgba(0, 255, 157, 0.4),
+          0 4px 10px rgba(0, 0, 0, 0.4);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      color: var(--primary);
     }
 
     .btn::before {
@@ -234,10 +261,11 @@
     }
 
     .footer {
-      font-size: 0.95rem;
+      font-size: var(--font-size-sm);
       color: var(--text-muted);
       animation: fadeIn 1s ease 0.9s forwards;
       opacity: 0;
+      padding-top: var(--spacing-md);
     }
 
     .footer a {
@@ -277,15 +305,16 @@
     }
 
     @media (max-width: 768px) {
-      .brand { font-size: 2.8rem; }
-      .subtitle { font-size: 1.1rem; padding: 0 1rem; }
-      .btn { padding: 0.9rem 1.8rem; font-size: 1rem; min-width: 160px; }
-      .content-card { padding: 2rem 1.5rem; margin-bottom: 2rem; }
+      .brand { font-size: var(--font-size-xxl); }
+      .subtitle { font-size: var(--font-size-base); padding: 0 1rem; }
+      .btn { padding: 0.9rem 1.8rem; font-size: 0.95rem; min-width: 160px; }
+      .content-card { padding: var(--spacing-lg) var(--spacing-md); margin-bottom: var(--spacing-lg); }
+      .container { padding: var(--spacing-md); }
     }
 
     @media (max-width: 480px) {
       .brand { font-size: 2.3rem; }
-      .subtitle { font-size: 1rem; }
+      .subtitle { font-size: 0.95rem; }
       .cta-container {
         flex-direction: column;
         gap: 1rem;
@@ -295,13 +324,12 @@
   </style>
 </head>
 <body>
-
   <div class="container">
     <div class="content-card">
       <h1 class="brand">HaewonAPIs</h1>
       <p class="subtitle">
-        Enjoy easy integration with HaewonAPIs – a simple, fast, and completely free RESTful solution. 
-        With no hidden costs, designed to support your development needs with easy-to-use, efficient, and reliable APIs.
+        Enjoy easy integration with HaewonAPIs – a simple, fast, and completely free RESTful solution.
+        Designed to support your development needs with easy-to-use, efficient, and reliable APIs.
       </p>
 
       <div class="cta-container">
@@ -309,7 +337,7 @@
           <span class="icon"><i class="fas fa-book"></i></span>
           Read Docs
         </a>
-        <a href="https://whatsapp.com/channel/0029VadHRVCEQIagiLHVJV0d" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <a href="https://wa.me/6283879152564" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
           <span class="icon"><i class="fab fa-whatsapp"></i></span>
           Join WhatsApp
         </a>
@@ -320,6 +348,5 @@
       <p>Created by <a href="https://github.com/Liwirya" target="_blank">Liwirya</a></p>
     </div>
   </div>
-
 </body>
 </html>

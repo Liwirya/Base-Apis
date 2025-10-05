@@ -3,7 +3,6 @@ const config = require("./config");
 const { SwaggerTheme, SwaggerThemeNameEnum } = require("swagger-themes");
 
 const theme = new SwaggerTheme();
-
 const customCss = `
   body {
     font-family: 'Poppins', sans-serif;
@@ -14,6 +13,7 @@ const customCss = `
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     overflow-x: hidden;
+    min-height: 100vh;
   }
 
   @keyframes gradientShift {
@@ -36,6 +36,7 @@ const customCss = `
     border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
   }
 
   .main-container::before {
@@ -321,6 +322,11 @@ const customCss = `
     50% { opacity: 1; }
     100% { opacity: 0.6; }
   }
+
+  .schema-container .schema-value {
+    font-weight: normal;
+    color: #c0c0c0;
+  }
 `;
 
 const options = {
@@ -338,6 +344,16 @@ const options = {
   customCss: `${theme.getBuffer(SwaggerThemeNameEnum.DARK)} ${customCss}`,
   swaggerOptions: {
     displayRequestDuration: true,
+    defaultModelExpandDepth: 1,
+    docExpansion: "list",
+    showExtensions: true,
+    tryItOutEnabled: true,
+    operationsSorter: "alpha",
+    tagsSorter: "alpha",
+    filter: true,
+    layout: "BaseLayout",
+    jsonEditor: false,
+    oauth2RedirectUrl: null,
   },
 };
 
@@ -360,19 +376,18 @@ const swaggerDocument = {
   tags: [
     {
       name: "Tools",
-      description:
-        "",
+      description: "API untuk berbagai tools utilitas seperti speedtest, ping, dan lainnya.",
     },
   ],
   paths: {
     "/api/tools/speedtest": {
       get: {
         tags: ["Tools"],
-        summary: "speedtest",
-        description: "Test your server's upload speed, ping to Google, and get network location info.",
+        summary: "Speed Test",
+        description: "Uji kecepatan upload, ping ke Google, dan dapatkan informasi lokasi jaringan.",
         responses: {
           200: {
-            description: "Speed test results successfully retrieved",
+            description: "Hasil uji kecepatan berhasil diperoleh",
             content: {
               "application/json": {
                 schema: {

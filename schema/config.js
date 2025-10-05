@@ -5,7 +5,7 @@ const options = {
   webName: "HaewonAPIs Playground",
   description: "Rest APIs",
   favicon:
-    "https://files.catbox.moe/int1gy.jpg",
+    "https://iili.io/KWpbDJe.jpg",
 };
 
 const host = {
