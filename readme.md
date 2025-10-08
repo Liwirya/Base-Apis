@@ -1,4 +1,4 @@
-<h1 align="center">🌐 HaewonAPIs</h1>
+<h1 align="center">HaewonAPIs</h1>
 
 <p align="center">
   <img src="https://files.catbox.moe/int1gy.jpg" alt="HaewonAPIs Thumbnail" width="300" />
