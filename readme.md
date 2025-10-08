@@ -1,28 +1,32 @@
-# 🌐 HaewonAPIs
+<p align="center">
+  <img src="https://files.catbox.moe/int1gy.jpg" alt="HaewonAPIs Thumbnail" width="300" />
+</p>
 
-> A lightweight and modular REST API built with **Express.js**, designed for fast development and seamless deployment on **[Vercel](https://vercel.com)**.  
-> Perfect for personal projects, AI integrations, or backend services.
+<h1 align="center">🌐 HaewonAPIs</h1>
 
-![HaewonAPIs Thumbnail](https://files.catbox.moe/int1gy.jpg)
-
----
-
-## 🔧 Tech Stack
-
-| Technology | Icon |
-|-----------|------|
-| HTML5     | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) |
-| CSS3      | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
-| JavaScript| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
-| Node.js   | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) |
+<p align="center">
+  A lightweight and modular REST API built with <strong>Express.js</strong>, perfect untuk kamu yang pengen cepet develop & gampang deploy di <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>.<br/>
+  Asik buat project personal, AI integration, ataupun backend service lainnya.
+</p>
 
 ---
 
-## 📦 Installation
+<h2>🔧 Tech Stack</h2>
 
-To get started, clone the repository and install dependencies:
+| Technology  | Icon                                                                                                           |
+|-------------|----------------------------------------------------------------------------------------------------------------|
+| HTML5       | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)              |
+| CSS3        | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)                  |
+| JavaScript  | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)|
+| Node.js     | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)          |
 
-```bash
+---
+
+<h2>📦 Installation</h2>
+
+Mulai dengan clone repo ini, terus install dependencies-nya:
+
+```
 git clone https://github.com/Liwirya/Base-Apis.git
 cd Base-Apis
 npm install
@@ -30,34 +34,34 @@ npm install
 
 ---
 
-## 🚀 Running Locally
+<h2>🚀 Running Locally</h2>
 
-Start the server using the following command:
+Mau nyalain server? Pakai perintah ini:
 
-```bash
+```
 node index
 ```
 
-The API will run on the port specified in `schema/config.js` (default: `1904`). You can access it at `http://localhost:1904`.
+API bakal jalan di port yang udah disetting di `schema/config.js` (default: `1904`). Akses aja di `http://localhost:1904`.
 
 ---
 
-## 🔧 Configuration
+<h2>🔧 Configuration</h2>
 
-Customize your API by editing the `schema/config.js` file:
+Buat custom API kamu, edit aja `schema/config.js`:
 
-```javascript
+```
 const options = {
-  name: "HaewonAPIs", // Ganti dengan nama bebas
-  developer: "@Liwirya", // Ganti dengan nama bebas
-  port: 1904, // Ganti dengan port bebas
-  webName: "HaewonAPIs Playground", // Ganti dengan nama bebas
-  description: "Rest APIs", // Ganti dengan deskripsi bebas
-  favicon: "https://files.catbox.moe/int1gy.jpg", // Ganti dengan URL foto bebas
+  name: "HaewonAPIs",           // Ganti terserah kamu
+  developer: "@Liwirya",        // Nama kamu juga boleh
+  port: 1904,                   // Bebas portnya
+  webName: "HaewonAPIs Playground", // Nama website bebas
+  description: "Rest APIs",     // Deskripsi bebas
+  favicon: "https://files.catbox.moe/int1gy.jpg", // URL foto bebas
 };
 
 const host = {
-  BASE_URL: "http://localhost:1904", // Ganti dengan URL yang sesuai
+  BASE_URL: "http://localhost:1904", // Ganti sesuai URL kamu
   // Contoh: https://haewonapis.vercel.app
 };
 
@@ -69,18 +73,20 @@ module.exports = {
 
 ---
 
-## 🛠️ Development
+<h2>🛠️ Development</h2>
 
-### ✅ Run with Nodemon (Auto-restart)
-```bash
+### Run pakai Nodemon biar auto-restart:
+
+```
 npm install -g nodemon
 nodemon index
 ```
 
-### ✅ Environment Variables
-Create a `.env` file for sensitive data:
+### Environment Variables
 
-```env
+Buat data sensitif di `.env` file:
+
+```
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1234567890/abcdefg...
 PORT=1904
 NODE_ENV=development
@@ -88,7 +94,7 @@ NODE_ENV=development
 
 ---
 
-## 📂 Project Structure
+<h2>📂 Project Structure</h2>
 
 ```
 Base-Apis/
@@ -109,12 +115,12 @@ Base-Apis/
 
 ---
 
-## 📎 License
+<h2>📎 License</h2>
 
 MIT © 2025 Liwirya
 
 ---
 
-## 💬 Contact
+<h2>💬 Contact</h2>
 
-- 🧑‍💻 GitHub: [github.com/Liwirya](https://github.com/Liwirya)
+- 🧑‍💻 GitHub: <a href="https://github.com/Liwirya" target="_blank" rel="noopener noreferrer">github.com/Liwirya</a>
