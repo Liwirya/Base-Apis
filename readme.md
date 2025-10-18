@@ -48,7 +48,7 @@ Pastikan Anda memiliki **Node.js** versi **20.0.0** atau lebih tinggi terinstal 
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone [https://github.com/Liwirya/Base-Apis.git](https://github.com/Liwirya/Base-Apis.git)
+    git clone https://github.com/Liwirya/Base-Apis.git
     ```
 2.  **Masuk ke direktori proyek:**
     ```bash
