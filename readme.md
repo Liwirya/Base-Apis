@@ -1,16 +1,16 @@
 # HaewonAPIs
 
-\<p align="center"\>
-\<a href="[https://github.com/Liwirya/Base-Apis/blob/main/LICENSE](https://www.google.com/search?q=https://github.com/Liwirya/Base-Apis/blob/main/LICENSE)"\>
-\<img src="[https://img.shields.io/github/license/Liwirya/Base-Apis?style=for-the-badge\&color=blue](https://www.google.com/search?q=https://img.shields.io/github/license/Liwirya/Base-Apis%3Fstyle%3Dfor-the-badge%26color%3Dblue)" alt="Lisensi"\>
-\</a\>
-\<a href="[https://github.com/Liwirya/Base-Apis/stargazers](https://www.google.com/search?q=https://github.com/Liwirya/Base-Apis/stargazers)"\>
-\<img src="[https://img.shields.io/github/stars/Liwirya/Base-Apis?style=for-the-badge\&color=yellow](https://www.google.com/search?q=https://img.shields.io/github/stars/Liwirya/Base-Apis%3Fstyle%3Dfor-the-badge%26color%3Dyellow)" alt="Bintang"\>
-\</a\>
-\<a href="[https://github.com/Liwirya/Base-Apis/network/members](https://www.google.com/search?q=https://github.com/Liwirya/Base-Apis/network/members)"\>
-\<img src="[https://img.shields.io/github/forks/Liwirya/Base-Apis?style=for-the-badge\&color=green](https://www.google.com/search?q=https://img.shields.io/github/forks/Liwirya/Base-Apis%3Fstyle%3Dfor-the-badge%26color%3Dgreen)" alt="Forks"\>
-\</a\>
-\</p\>
+<p align="center">
+<a href="https://github.com/Liwirya/Base-Apis/blob/main/LICENSE">
+<img src="https://img.shields.io/github/license/Liwirya/Base-Apis?style=for-the-badge&color=blue" alt="Lisensi">
+</a>
+<a href="https://github.com/Liwirya/Base-Apis/stargazers">
+<img src="https://img.shields.io/github/stars/Liwirya/Base-Apis?style=for-the-badge&color=yellow" alt="Bintang">
+</a>
+<a href="https://github.com/Liwirya/Base-Apis/network/members">
+<img src="https://img.shields.io/github/forks/Liwirya/Base-Apis?style=for-the-badge&color=green" alt="Forks">
+</a>
+</p>
 
 **HaewonAPIs** adalah REST API modular dan ringan yang dibangun dengan **Express.js**. Didesain untuk pengembangan yang cepat dan kemudahan *deployment*, terutama di platform seperti Vercel.
 
@@ -18,32 +18,37 @@
 
 ## ✨ Fitur Utama
 
-  - **Swagger UI Integration**: Dokumentasi API interaktif yang dibuat secara otomatis, memudahkan pengujian *endpoint*.
-  - **Rate Limiting**: Melindungi API dari serangan *brute-force* dengan membatasi jumlah permintaan dari satu alamat IP.
-  - **Security Headers**: Dilengkapi dengan *header* keamanan seperti `X-XSS-Protection`, `Strict-Transport-Security`, dan `Content-Security-Policy` untuk meningkatkan keamanan.
-  - **Discord Webhook Logging**: Notifikasi *real-time* ke *channel* Discord setiap kali ada akses API, baik berhasil maupun gagal.
-  - **Speedtest Endpoint**: Fitur bawaan untuk menguji kecepatan *upload*, *ping*, dan mendapatkan informasi jaringan server.
-  - **Struktur Modular**: Proyek disusun dalam modul-modul terpisah (`router`, `scrapers`, `schema`) untuk kemudahan pengembangan dan pemeliharaan.
+-   **Integrasi Swagger UI**: Dokumentasi API interaktif yang dibuat secara otomatis menggunakan `swagger-ui-express` dan `swagger-themes`, memudahkan pengujian *endpoint*.
+-   **Rate Limiting**: Melindungi API dari serangan *brute-force* dengan membatasi jumlah permintaan dari satu alamat IP menggunakan `express-rate-limit`.
+-   **Security Headers**: Dilengkapi dengan *header* keamanan seperti `X-XSS-Protection`, `Strict-Transport-Security`, `Content-Security-Policy`, `Referrer-Policy`, dan `Permissions-Policy` untuk meningkatkan keamanan.
+-   **Discord Webhook Logging**: Notifikasi *real-time* ke *channel* Discord setiap kali ada akses API, baik berhasil maupun gagal (memerlukan konfigurasi `DISCORD_WEBHOOK_URL`).
+-   **Speedtest Endpoint**: Fitur bawaan (`/api/tools/speedtest`) untuk menguji kecepatan *upload*, *ping* ke Google, dan mendapatkan informasi lokasi jaringan server.
+-   **Struktur Modular**: Proyek disusun dalam modul-modul terpisah (`router`, `scrapers`, `schema`, `lib`) untuk kemudahan pengembangan dan pemeliharaan.
+-   **Penanganan Error**: Middleware khusus untuk menangani error dan memberikan respons JSON yang konsisten.
+-   **Konfigurasi CORS**: Memungkinkan konfigurasi Cross-Origin Resource Sharing (CORS) yang fleksibel.
+-   **Logging Konsol**: Menggunakan `chalk` dan `spinnies` untuk logging konsol yang informatif dan menarik secara visual.
 
 -----
 
 ## 🔧 Teknologi yang Digunakan
 
-| Kategori | Teknologi |
-| --- | --- |
-| **Bahasa & Runtime** |   |
-| **Framework & Library** |   |
-| **Lainnya** | `cors`, `express-rate-limit`, `chalk`, `axios` |
+| Kategori                | Teknologi                                                                                                                                                                                                                                     |
+| :---------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bahasa & Runtime** | Node.js (>=20.0.0)                                                                                                                                                                                                                 |
+| **Framework & Library** | Express.js, Axios, Cors, express-rate-limit, swagger-ui-express, swagger-themes, Chalk, Spinnies, node-fetch, dotenv         |
+| **Keamanan** | Helmet, HPP, bcryptjs, jsonwebtoken, sanitize-html, xss-clean                                                                                                                |
+| **Tools & Utilities** | Multer, Moment-timezone, Jimp, qrcode, qrcode-reader, validator, express-validator, memory-cache, cfonts, pino, winston |
+| **Deployment** | Vercel (konfigurasi di `vercel.json`)                                                                                                                                                                                              |
 
 -----
 
 ## 📦 Prasyarat & Instalasi
 
-Pastikan Anda memiliki Node.js versi **20.0.0** atau lebih tinggi.
+Pastikan Anda memiliki **Node.js** versi **20.0.0** atau lebih tinggi terinstal di sistem Anda.
 
 1.  **Clone repositori ini:**
     ```bash
-    git clone https://github.com/Liwirya/Base-Apis.git
+    git clone [https://github.com/Liwirya/Base-Apis.git](https://github.com/Liwirya/Base-Apis.git)
     ```
 2.  **Masuk ke direktori proyek:**
     ```bash
@@ -64,13 +69,13 @@ Untuk menjalankan server secara lokal, gunakan perintah:
 
 ```bash
 node index.js
-```
+````
 
 Server akan berjalan pada port yang ditentukan di `schema/config.js` (default: **1904**). Anda dapat mengaksesnya di `http://localhost:1904`.
 
 ### Mode Pengembangan
 
-Untuk pengembangan, disarankan menggunakan `nodemon` agar server otomatis me-restart setiap ada perubahan file.
+Untuk pengembangan, disarankan menggunakan `nodemon` agar server otomatis me-restart setiap ada perubahan file. Jalankan dengan:
 
 ```bash
 npm run dev
@@ -88,16 +93,19 @@ Base-Apis/
 ├── scrapers/
 │   └── tools.js            # Logika untuk fitur seperti speedtest
 ├── schema/
-│   ├── config.js           # Konfigurasi utama proyek
-│   └── endpoint.js         # Konfigurasi dokumentasi Swagger
+│   ├── config.js           # Konfigurasi utama proyek (nama, port, dll)
+│   └── endpoint.js         # Konfigurasi dokumentasi Swagger UI
 ├── lib/
 │   └── print.js            # Utilitas untuk logging di konsol
 ├── resources/
 │   ├── index.html          # Halaman utama
 │   └── 404.html            # Halaman error 404
+├── uploads/                # Direktori (jika menggunakan multer) untuk file upload
 ├── .env.example            # Contoh file environment variables
 ├── package.json            # Daftar dependensi dan skrip
-└── vercel.json             # Konfigurasi untuk deployment Vercel
+├── package-lock.json       # Kunci versi dependensi
+├── vercel.json             # Konfigurasi untuk deployment Vercel
+└── LICENSE                 # File lisensi proyek
 ```
 
 -----
@@ -105,6 +113,9 @@ Base-Apis/
 ## ⚙️ Contoh Penggunaan
 
 Setelah server berjalan, Anda bisa mengakses beberapa *endpoint* berikut:
+
+  - **Halaman Utama**:
+    Buka `http://localhost:1904/` di browser Anda.
 
   - **Dokumentasi API (Swagger UI)**:
     Buka `http://localhost:1904/playground` di browser Anda untuk melihat dokumentasi interaktif dari semua *endpoint* yang tersedia.
@@ -116,7 +127,7 @@ Setelah server berjalan, Anda bisa mengakses beberapa *endpoint* berikut:
     GET http://localhost:1904/api/tools/speedtest
     ```
 
-    Respons yang akan diterima:
+    Respons yang akan diterima (contoh):
 
     ```json
     {
